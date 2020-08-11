@@ -1,0 +1,215 @@
+/* ---------------------variable */
+:root{
+--green-color:#7acc2d;
+--white-color: white;
+--black-color: #313337;
+/* Tipografia */
+--normal: 12px;
+/* Espaciado */
+--space: 10px;
+/* Box shadow */
+--box: 0 0 20px #c1bcbc;
+}
+/* ---------------------generales */
+
+html,body{
+  padding: 0px;
+  margin: 0px;
+  font-size: var(--normal);
+  font-family: Arial;
+}
+
+label{
+  font-size: var(--normal);
+}
+
+
+
+/* ----------------------------navbar */
+nav{
+  display: flex;  /*  Para colocar uno a la par del otro horizontalmente */
+  background-color: var(--green-color);
+  padding: var(--space);
+  color: var(--white-color);
+  /* Separa el div "brand_image" con el div "nav_options" y este ultimo lo alinear hacia la derecha */
+  justify-content: space-between;
+  /* Para alinear el logo, pues se encuentra desalineado */
+  align-items: center;
+}
+
+nav ul{
+  display: flex;
+}
+
+nav li{
+  padding-left: 20px;
+  list-style: none;
+}
+
+nav li a{
+  color: var(--black-color);
+  text-decoration: none;
+}
+
+  /* Las acciones que puede tener un boton */
+nav li a:hover{
+  color: var(--white-color);
+}
+
+
+/* --------------------------------main section */
+
+.main_section{
+  padding:15%;
+  /* para central el texto */
+  text-align: center;
+}
+
+.products{
+  /* los dos puntos en la exploracion de la url sirve para regresar a la carpeta anterior */
+  background-image: url("../images/curve.png");
+  /* Le damos altura para ver que esta ahi */
+  max-height: 100px;
+  /* Significa que ocupe el tamaño del dif que tiene */
+  background-size: cover;
+  /* luego se alinea al centro y arriba */
+  background-position: center top;
+  padding:20%;
+  /* Estan alineados los product verticalmente esto se vuelve a solucionar con el display flex */
+  display: flex;
+}
+
+.product{
+  /* Para separar cada product y mejorar la vista */
+  padding: var(--space);
+  /* Para que product resalte hacia arriba es necesario un margin-top pero negativo */
+  margin-top: -240px;
+}
+
+.product .content{
+  background-color: var(--white-color);
+  padding: 15px;
+  /* sombra al rededor de los elementos box-shadow: coordenada x, coordenada y, cuanto se va a distribuir al rededor, color*/
+  box-shadow: var(--box);
+}
+
+.img_content{
+  text-align: center;
+}
+
+.main_button{
+  background-color: var(--green-color);
+  width: 100%;
+  padding: var(--space);
+  font-size: 12px;
+  color: var(--white-color);
+  border: 0;
+  /* Efecto de manita dando click en el boton */
+  cursor: pointer;
+  /* borde redondeado  */
+  border-radius: 2px;
+}
+
+.main_button:hover{
+  /* Para darle un color distinto al momento de colocar el cursor en los botones */
+  background-color: #5e9e22;
+}
+
+
+/* ---------------------------------features */
+.features {
+  background-color: var(--white-color);
+  padding: 5%;
+  position: center;
+  display: flex;
+}
+
+.characteristic{
+  padding: var(--space);
+}
+
+.characteristic .c_content{
+  background-color: var(--white-color);
+  padding: 15px;
+  box-shadow: var(--box);
+  text-align: center;
+}
+
+
+/* -----------------------------------------mentions */
+.mentions_text{
+  text-align: center;
+}
+.mentions{
+  background-color: var(--white-color);
+  padding: 2%;
+  position: center;
+  display: flex;
+}
+
+.measurement{
+  height: auto;
+  padding: 5px;
+}
+
+.measurement .c_measurement{
+  text-align: left;
+  background-color: var(--white-color);
+  padding: 5px;
+  box-shadow: var(--box);
+}
+
+.c_measurement h3 {
+  text-align: left;
+}
+.c_measurement p{
+  text-align: left;
+}
+/* ---------------------------------Venta */
+.modulo_pago{
+  background-color: var(--white-color);
+  box-shadow: var(--box);
+  padding: var(--space);
+
+}
+.modulo_pago_images{
+  max-width: 150px;
+  /* para centrar la imagen se utiliza: */
+  text-align: center;
+  width: 100%;
+  /* esto no afecta por motivos de heredacion de padres e hijos, por tanto requiere de un margin auto */
+  margin: auto;
+}
+
+.data {
+  margin-top: var(--space);
+  /* para que lleguen al ancho completo  */
+  width: 100%;
+  /* apra darle una altura  */
+  height: 35px;
+  border-radius: 2px;
+  border: 1px solid var(--black-color);
+  /* ya que los campos del formulario no respetan el limite del contenedor */
+  box-sizing: border-box;
+}
+
+/* para separar el boton del formulario y que no nos afecte el resto de botones se necesita colocar una clase luego de otra */
+.modulo_pago .main_button{
+  margin-top: 10px;
+}
+
+/* -------------------------------Footer */
+footer {
+  background-color: var(--black-color);
+  display: flex;
+  padding: var(--space);
+  color: var(--white-color);
+  /* Separa el div "brand_image" con el div "nav_options" y este ultimo lo alinear hacia la derecha */
+  justify-content: space-between;
+  /* Para alinear el logo, pues se encuentra desalineado */
+  align-items: center;
+}
+
+.contact a{
+  color: var(--green-color);
+}
